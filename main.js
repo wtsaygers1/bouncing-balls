@@ -29,12 +29,12 @@ Ball.prototype.draw = function() {
     ctx.fill();
 }
 
-let testBall = new Ball(50, 100, 4, 4, 'blue', 10);
+/* let testBall = new Ball(50, 100, 4, 4, 'blue', 10);
 
 testBall.x
 testBall.size
 testBall.color
-testBall.draw()
+testBall.draw() */
 
 Ball.prototype.update = function() {
     if ((this.x + this.size) >= width) {
@@ -62,7 +62,7 @@ Ball.prototype.collisionDetect = function() {
             const distance = Math.sqrt(dx * dx + dy * dy);
 
             if (distance < this.size + balls[j].size) {
-                balls[j].color = this.color = 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',' + random(0, 255) +')';
+                balls[j].color = this.color = 'rgb(' + random(230, 255) + ',' + random(0, 50) + ',' + random(100, 176) +')';
             }
         }
     }
